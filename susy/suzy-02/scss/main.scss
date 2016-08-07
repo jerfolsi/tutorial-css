@@ -1,0 +1,30 @@
+@import "susy";
+
+
+body {
+  background-color: #f1f1f1;  
+}
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+body {padding-top: 20px;}
+h1 {margin-top: 0}
+.project {margin-bottom: 10px}
+
+body { @include container(40em);}
+aside { @include span(3 of 12); }
+main { @include span(9 of 12); }
+
+.project {
+  @include gallery(6 of 12);
+  background-color: #AAAAAA;
+}
+.project:first-of-type{
+	background-color: red;
+}

@@ -1,0 +1,17 @@
+nav.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+nav.menu li {
+  display: inline-block;
+  color: blue; }
+nav.menu li:first-child {
+  color: red; }
+nav.menu li:last-child {
+  color: green; }
+nav.menu a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none; }
+
+/*# sourceMappingURL=sass02.css.map */

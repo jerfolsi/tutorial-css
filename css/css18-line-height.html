@@ -1,0 +1,65 @@
+<!-- ici on voit comment on center un element -->
+<!-- il y a 5 solutions pour le faire !! -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Tuto</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+
+		  .para1{
+		  		color:blue;
+		  		font-size:14px;
+		  		letter-spacing:2px;
+		  		/*letter-spacing:0.2em; */
+		  }
+
+		  .para2{
+		  		color:green;
+		  		font-size:14px;
+		  		word-spacing:10px;
+		  }
+		  
+		  .para3{
+		  		color:red;
+		  		/* line-height is the height of the whole line */
+		  		/* 28px = 14px (x2) => donc on saute une ligne entre chaque ligne ..*/
+		  		font-size:14px;
+		  		line-height:28px;
+		  }
+
+		  .para4{
+		  		color:orange;
+		  		/* line-height is the height of the whole line */
+		  		/* 2em => means 2 fois la taille de la police ==> 2x14px => 28px */
+		  		/* em est relative à la taille de la police en cours ? */
+		  		font-size:14px;
+		  		line-height:2em;
+		  }
+
+	  </style>
+	</head>
+	<body>
+		
+		<p class="para1">
+			The line-height property can accept the keyword values normal or none as well as a number, length, or percentage. According to the spec, a value of "normal" is not just a single concrete value that is applied to all elements, but rather computes to a "reasonable" value depending on the font size set (or inherited) on the element.
+		</p>
+
+		<p class="para2">
+			 A length value can be defined using any valid CSS unit (px, em, rem, etc). A percentage value is the font size of te element multiplied by the percentage. For example:
+ 		</p>
+
+		<p class="para3">
+			The line-height property can accept the keyword values normal or none as well as a number, length, or percentage. According to the spec, a value of "normal" is not just a single concrete value that is applied to all elements, but rather computes to a "reasonable" value depending on the font size set (or inherited) on the element.
+   		 	A length value can be defined using any valid CSS unit (px, em, rem, etc). A percentage value is the font size of te element multiplied by the percentage. For example:
+ 		</p>
+
+ 		<p class="para4">
+			The line-height property can accept the keyword values normal or none as well as a number, length, or percentage. According to the spec, a value of "normal" is not just a single concrete value that is applied to all elements, but rather computes to a "reasonable" value depending on the font size set (or inherited) on the element.
+   		 	A length value can be defined using any valid CSS unit (px, em, rem, etc). A percentage value is the font size of te element multiplied by the percentage. For example:
+ 		</p>
+
+	</body>
+</html>

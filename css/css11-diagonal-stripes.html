@@ -1,0 +1,42 @@
+<!-- Book css secret page 44 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Tuto</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+
+	  	div{
+  			height:100px;
+  			width:100px;
+  			background-size: 100px 100px;
+	  	}
+
+	    #div1a{
+	    	/* red fini à 50% ; blue commence à 50% (pas de fusion des couleurs */
+		  	background:linear-gradient(45deg, red 50%, blue 50%);
+	    }
+		#div1b{
+	    	/* red fini à 0% ; blue commence à 100% (fusion parfaite des couleurs */
+		  	background:linear-gradient(45deg, red 0%, blue 100%);
+	    }
+	  	
+ 		#div2{
+ 			/* ok j'arrive à comprendre ! */
+  			background:linear-gradient(45deg,
+	  				red 25%, green 25%, green 50%, 
+	  				red 50%, red 75%, green 75%);
+	  	}
+
+	  </style>
+	</head>
+	<body>
+		<div id="div1a"></div>
+		<div id="div1b"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+		<div id="div4"></div>
+	</body>
+</html>

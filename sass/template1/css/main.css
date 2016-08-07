@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  background-color: #DDDDDD;
+  height: 100px;
+  margin-bottom: 20px;
+}
+header p {
+  padding: 20px 0px 0px 20px;
+  font-size: 2.0rem;
+}
+
+main {
+  width: 70%;
+  float: left;
+  background-color: #FFFFFF;
+  /* permet de retirer le padding-left du premier element de chaque ligne ex : nth-child(3n+1) */
+  /* permet de retirer le padding-right du dernier element de chaque ligne ex : nth-child(3n) */
+}
+main h1 {
+  border-bottom: 2px solid #E0E0E0;
+  font-size: 1.8rem;
+  padding-left: 10px;
+}
+main article {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+main article .content {
+  background-color: #EFEFEF;
+  padding: 10px;
+  height: 380px;
+  /* appelle le code permettant de cropper une image (attention il faut rajouter un <div> + <img> dans le html */
+}
+main article .content h2 {
+  padding: 10px;
+}
+main article .content .img-crop {
+  position: relative;
+  width: 100%;
+  height: 152px;
+  overflow: hidden;
+}
+main article .content .img-crop img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main article .content p {
+  padding-top: 10px;
+  text-align: justify;
+  font-size: 1rem;
+}
+main article:nth-child(2n+1) {
+  padding-left: 0;
+}
+main article:nth-child(2n) {
+  padding-right: 0;
+}
+
+aside {
+  padding-left: 10px;
+  width: 30%;
+  float: right;
+  background-color: #FFFFFF;
+}
+aside h1 {
+  border-bottom: 2px solid #E0E0E0;
+  font-size: 1.8rem;
+  padding-left: 5px;
+}
+aside ul {
+  padding-top: 10px;
+}
+aside ul li {
+  margin-bottom: 1px;
+  list-style-type: none;
+  padding: 10px;
+  border-left: 4px solid #C0C0C0;
+}
+aside ul li:nth-child(odd) {
+  background-color: #F0F0F0;
+}
+aside ul li:nth-child(even) {
+  background-color: #E0E0E0;
+}
+aside ul li:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}

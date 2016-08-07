@@ -1,0 +1,49 @@
+<!-- ici on voit comment on center un element -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Tuto</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+	  		.box{
+	  			width:300px;
+	  			height:300px;
+	  			background-color: red;
+	  			margin:2px;
+	  		}
+
+	  		/* ***************************************************** */
+	  		/* solution 5:;
+	  		   -on utilise la position:absolute + une transformation;
+	  		   -on a pas besoin de connaiter la taille du DIV à centrer :);
+	  		   -on remarque qu'on a pas besoin de sépcifier la valeur  TOP, 
+	  		   le div reste positionné en haut du container
+	  		/* ***************************************************** */
+
+	  		.container-sol5{
+	  			height:300px;
+	  			background-color: #C0C0C0;
+	  		}
+	  		.container-sol5 .box{
+	  			position:absolute;
+	  			left:50%;
+	  			transform: translate(-50%, 0);
+	  		}
+	  </style>
+	</head>
+	<body>
+
+		<p>Un paragraphe pour suivre ...</p>
+
+		<div class="container-sol5">
+			<div class="box"></div>
+		</div>
+
+		<p>Un paragraphe pour suivre ...</p>
+
+		
+
+	</body>
+</html>

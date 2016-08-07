@@ -1,0 +1,65 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Bootstrap Example</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <style>
+	  	/* ---------------------------------------------------------------------- */
+	  	/* EXEMPLE 1 */
+	  	/* ---------------------------------------------------------------------- */
+	  	.div1 > p{
+	  		display:none;
+	  	}
+	  	.div1:hover > p{
+	  		display:block;
+	  	}
+
+	  	/* ---------------------------------------------------------------------- */
+	  	/* EXEMPLE 2 */
+	  	/* ---------------------------------------------------------------------- */
+	  	/* l'element d'id='para' qui suit un element de class 'div2' est rendu invisible */
+	  	.div2 ~ #para{
+	  		display:none;
+	  	}
+
+	  	/* l'element d'id='para' qui suit un element de class 'div2' et qui est survolé devient visible */
+	  	.div2:hover ~ #para{
+	  		display:block;
+	  	}
+
+	  	/* ---------------------------------------------------------------------- */
+	  	/* EXEMPLE 3 */
+		/* ---------------------------------------------------------------------- */
+		.div3 ~ p{
+	  		display:none;
+	  	}
+
+	  	.div3:hover ~ p{
+	  		display:block;
+	  	}
+
+	  </style>
+	</head>
+	<body>
+		<h1>Exemple 1</h1>
+		<div class="div1">Hover me to show the P element
+			<p>This is an hidden P element<p>
+		</div>
+
+		<h1>Exemple 2</h1>
+		<div class="div2">Hover me to show the P element</div>
+		<p id="para">This is an hidden P Element</p>
+
+		<h1>Exemple 3</h1>
+		<div class="div3">Hover me to show the P element</div>
+		<p>This is an hidden P Element</p>
+		<p>This is an another hidden P Element</p>
+	</body>
+
+
+</html>

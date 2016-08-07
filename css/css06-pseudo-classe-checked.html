@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Bootstrap Example</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <style>
+
+	    /* style du bouton (label) */
+		#expand-btn {
+		    margin: 0 3px;
+		    display: inline-block;
+		    font: 12px / 13px "Lucida Grande", sans-serif;
+		    text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+		    padding: 3px 6px;
+		    border: 1px solid rgba(0, 0, 0, 0.6);
+		    background-color: #969696;
+		    cursor: default;
+		    border-radius: 3px;
+		    box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+		}
+
+		/* style du bouton qui est suivi par le checkbox avec l'état 'checked' */
+		#isexpanded:checked ~ #expand-btn {
+		    background: #B5B5B5;
+		    box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
+		}
+
+		/* on rend la checkbox invisible */
+		/* tous les elements avec la classe 'expandable' sont également invisible */
+		#isexpanded, .expandable {
+		    display: none;
+		}
+
+		/* tous les éléments <tr> qui suivent la checkbox avec l'état 'checked' 
+		   retrouvent leur apparence */
+		#isexpanded:checked ~ * tr.expandable {
+		    display: table-row; /* le display par defaut des <tr> => pour activier l'affichage */
+		    background: #cccccc;
+		}
+
+		/* tous les elements <p> qui suivent la checkbox avec l'état 'checked'
+			deviennent visible */
+		#isexpanded:checked ~ p.expandable, #isexpanded:checked ~ * p.expandable {
+		    display: block; /* le display par défaut des <p> pour activier l'affichage */
+		    background: #cccccc;
+		}
+
+	  </style>
+	 </head>
+	 <body>
+
+	 	<input type="checkbox" id="isexpanded" />
+
+		<table>
+		    <thead>
+		        <tr><th>Colonne 1</th><th>Colonne 2</th><th>Colonne 3</th></tr>
+		    </thead>
+		    <tbody>
+		        <tr class="expandable"><td>[cellule]</td><td>[cellule]</td><td>[cellule]</td></tr>
+		        <tr><td>[cellule]</td><td>[cellule]</td><td>[cellule]</td></tr>
+		        <tr><td>[cellule]</td><td>[cellule]</td><td>[cellule]</td></tr>
+		        <tr class="expandable"><td>[cellule]</td><td>[cellule]</td><td>[cellule]</td></tr>
+		        <tr class="expandable"><td>[cellule]</td><td>[cellule]</td><td>[cellule]</td></tr>
+		    </tbody>
+		</table>
+
+		<p>[Un texte normal]</p>
+		<p><label for="isexpanded" id="expand-btn">Afficher les éléments masqués</label></p>
+		<p class="expandable">[Un texte caché]</p>
+		<p>[Un texte normal]</p>
+
+
+	 </body>
+
+
+</html>

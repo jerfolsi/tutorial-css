@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Bootstrap Example</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <style>
+	  		/* selectionne tous les <li> qui sont immédiatement (sans parasite) précédés par un <li> */
+	  		li + li{
+	  			color:red;
+	  		}
+
+	  		/* selection tous les <li> qui suivent immédiatement (sans parasite) un <li> avec la classe 'toto' */
+	  		li.toto + li{
+	  			color:green;
+	  		}
+
+	  		/* quand on a un <li> avec la classe 'toto' qui est survolé => alors ca rend en gras
+	  			le texte du <li> suivant */
+	  		li.toto:hover + li{
+	  			font-weight: bold;
+	  		}
+
+	  		/* tout <div> immédiatement précédé par un autre <div> voit ton texte devenir gras */
+	  		/* si une balise <p> est intercallée entre 2 <div>, cela ne marche pas ! */
+	  		div + div{
+	  			font-weight: bold;
+	  		}
+
+	  </style>
+	 </head>
+	 <body>
+ 		<ul>
+ 			<li>one</li>
+ 			<li>two</li>
+ 			<li>three</li>
+ 			<li class="toto">four</li>
+ 			<li>five</li>
+ 			<li>six</li>
+ 			<li class="toto">seven</li>
+ 			<li>height</li>
+ 		</ul>
+
+
+ 		<div>div1</div>
+ 		<div>div2</div>
+ 		<p>para</p>
+ 		<div>div3</div>
+
+
+	 </body>
+
+
+</html>

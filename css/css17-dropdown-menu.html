@@ -1,0 +1,104 @@
+<!-- ici on voit comment on center un element -->
+<!-- il y a 5 solutions pour le faire !! -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Tuto</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+	  *{
+	  		list-style:none;
+	  		text-decoration: none;
+	  		padding:0;
+	  		margin:0;
+	  }
+
+  	  /* -------------------------------------------------------*/
+  	  /* Menu de niveau 1 */
+  	  /* -------------------------------------------------------*/
+
+	  nav{
+	  	float:left;
+	  	width:100%;
+	  	height:102px;
+	  	background-color: yellow;
+	  }
+
+	  nav > ul{
+	  	float:right;
+	  	width:70%;
+	  	height: 100%;
+	  	background-color: pink;
+	  }
+
+	  nav > ul > li{
+	  	float:left;
+	  	width:auto;
+	  	margin-right:10px;
+	  	display: inline-block;
+	  	line-height: 102px;
+	  }
+
+	  nav > ul > li > a{
+	  	padding:50px;
+	  	color:#333333;
+	  }
+
+	  nav > ul > li > ul{
+	  	opacity:0 ;
+	  }
+
+  	  nav > ul > li:hover > ul{
+  	  	opacity:1;
+
+  	  	/* specify what you want to transition : 'opacity' */
+  	  	transition:opacity 1s;
+  	  }
+
+  	  /* -------------------------------------------------------*/
+  	  /* Menu de niveau 2 */
+  	  /* -------------------------------------------------------*/
+  	  
+  	  nav > ul > li > ul > li{
+  	  	background-color: red;
+  	  }
+
+  	  nav > ul > li > ul > li:hover{
+  	  	background-color: #AAAAAA;
+  	  }
+
+  	  nav > ul > li > ul > li > a{
+  	  	padding:50px;
+  	  }
+
+
+	  </style>
+	</head>
+	<body>
+		
+		<nav>
+			<ul>
+				<li><a href="#">Page1</a>
+					<ul>
+						<li><a href="#">Sub 1</a></li>
+						<li><a href="#">Sub 1</a></li>
+						<li><a href="#">Sub 1</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Page2</a>
+					<ul>
+						<li><a href="#">Sub 1</a></li>
+						<li><a href="#">Sub 1</a></li>
+						<li><a href="#">Sub 1</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Page3</a></li>
+				<li><a href="#">Page4</a></li>
+			</ul>
+		</nav>
+
+
+	</body>
+</html>

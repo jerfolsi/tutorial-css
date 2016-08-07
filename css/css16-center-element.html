@@ -1,0 +1,94 @@
+<!-- ici on voit comment on center un element -->
+<!-- il y a 5 solutions pour le faire !! -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Tuto</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+	  		.box{
+	  			width:300px;
+	  			height:300px;
+	  			background-color: red;
+	  			margin:2px;
+	  		}
+
+	  		/* ***************************************************** */
+	  		/* solution 1 : text-align / display:inline-block*/
+	  		/* ***************************************************** */
+
+	  		.container-sol1{
+	  			/* aligne tous les elements de type 'inline' */
+	  			text-align:center;
+	  		}
+	  		.container-sol1 .box{
+	  			/* le div ne sera plus considéré comme un 'block' mais comme un 'inline' */
+	  			/* du coup il ne prendra plus toute la largeur de l'espace */
+	  			display: inline-block;
+	  		}
+
+	  		/* ***************************************************** */
+	  		/* solution 2 : margin:0 auto */
+	  		/* ***************************************************** */
+
+	  		.container-sol2 .box{
+	  			/* the margin is distributed in the right and the left */
+	  			margin: 0 auto;
+	  		}
+
+	  		/* ***************************************************** */
+	  		/* solution 3 : dérivé ; on joue avec le margin pour décaller l'élement */
+	  		/* ***************************************************** */
+
+			.container-sol3 .box{
+	  			margin-right:auto;
+	  			margin-left:50px;
+	  		}
+
+	 		/* ***************************************************** */
+	  		/* solution 4 : absolute ; left:50%; margin-left ajustement */
+	  		/* ***************************************************** */
+	  		.container-sol4{
+	  			background-color: #D0D0D0;
+	  			position: relative;
+	  		}
+	  		.container-sol4 .box{
+	  			position:absolute;
+	  			left:50%;
+	  			margin-left:-150px;
+	  			background-color: blue;
+	  		}
+
+	 	
+
+	  </style>
+	</head>
+	<body>
+		<!-- SOLUTION 1 : centrage parfait -->
+		<div class="container-sol1">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+
+		<!-- SOLUTION 2 : centrage parfait -->
+		<div class="container-sol2">
+			<div class="box"></div>
+		</div>
+
+		<!-- SOLUTION 3 : dérivé > aligné sur la gauche avec 50 pixel de marge -->
+		<div class="container-sol3">
+			<div class="box"></div>
+		</div>
+
+		<!-- SOLUTION 4 : centrage avec positioning absolute -->
+		<div class="container-sol4">
+			<div class="box"></div>
+		</div>
+
+		
+
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Tuto</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+
+	  	   *{
+	  	   	padding:0;
+	  	   	margin:0;
+	  	   }
+
+	  	   div{
+	  	  	 	height:200px;
+		  		width:200px;
+		  }
+		  	
+		  .div1{
+
+		  	text-align: center;
+
+		  	padding:0px;
+		  	border:20px solid transparent;
+
+		  	/* le premier background déclaré sera au dessus du 2eme */
+		  	background: linear-gradient(white, white),
+		  				url('http://www.dianathompson.net/To_Hold_You/green_stone_circle.jpg');
+
+		   	/* le premier background déclaré est borné au padding-box
+		   	   donc le 2eme background déclaré apparaitra sur la zone de la bordure */
+		  	background-clip:padding-box, border-box;
+
+		  	/* indique que le background doit bien épouser tout le div */
+		   	background-size:cover;
+
+		   	/* indique que le commence le background dans la border-box */
+		  	background-origin: border-box;
+		  }
+
+		  .div2{
+		  	background-color: red;
+		  	border:20px solid green;
+		  }
+
+	  </style>
+	</head>
+	<body>
+		<div class="div1">How cool is that?</div>
+	
+		<div class="div2"></div>
+
+	</body>
+</html>

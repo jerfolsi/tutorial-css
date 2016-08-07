@@ -1,0 +1,11 @@
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  padding: 50px 50px; }
+
+/*# sourceMappingURL=sass04.css.map */

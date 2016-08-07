@@ -1,0 +1,66 @@
+@import "susy";
+@import "breakpoint";
+
+$small : 300px;
+$medium : 700px;
+$large : 1000px;
+
+
+$susy: (
+	columns: 12,
+	gutters: 1/8,
+	math: fluid,
+	output: float,
+	gutter-position: split
+);
+
+body{
+	background:#EEEEEE;
+	@include container(80%);
+}
+
+a{
+	color:#FF0000;
+	text-decoration: none;
+}
+
+aside ul{
+	padding:0;
+	li{
+		list-style: none;
+		margin:0;
+		a{
+			display:block;
+			padding:10px 5%;
+			border-bottom: solid 1px #AAAAAA;
+		}
+	}
+}
+
+
+
+
+@include breakpoint($medium){
+	main{
+		@include span(8);
+	}
+
+	aside{
+		@include span(3 at 9);
+	}
+}
+
+
+@include susy-breakpoint($large, 24){
+	main{ 
+		@include span(21);
+		.col3{
+			@include span(4 of 12);
+		}
+	}
+
+	aside{
+		@include span(3);
+		@include pad(0px 0px);
+	}
+}

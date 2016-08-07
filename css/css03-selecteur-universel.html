@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Bootstrap Example</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <style>
+
+	  /* cible tous les elements du document! */
+	  *{
+	  	text-decoration:underline;
+	  }
+
+	  /* .maclasse1 et *.maclasse1 sont équivalent ! */
+	  *.maclasse1{
+	  	font-weight:normal;
+	  }
+
+	  /* cible tous les éléments qui ont l'attribut 'lang=fr' */
+	  /* ici on combine un selecteur universel + un selecteur d'attribut */
+	  * [lang=fr] {
+ 		 color:green;
+	   }
+
+	  </style>
+	 </head>
+	 <body>
+	 	<div class="maclasse1">Div maclasse1</div>
+	 	<div lang="en">Div lang=en</div>
+	 	<div lang="fr">Div lang=fr</div>
+	 </body>
+</html>

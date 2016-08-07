@@ -1,0 +1,115 @@
+@import 'crop-img';
+
+$main-nb-colonnes:2;
+$main-article-height:380px;
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color:#FFFFFF;
+	font-family: 'PT Sans', sans-serif;
+}
+
+#container{
+	width:960px;
+	margin:0 auto;
+}
+
+header{
+	width:100%;
+	background-color: #DDDDDD;
+	height:100px;
+	p{
+		padding:20px 0px 0px 20px;
+		font-size:2.0rem;
+	}
+	margin-bottom:20px;
+}
+
+main{
+	width:70%;
+	float:left;
+	background-color: #FFFFFF;
+
+	h1{
+		border-bottom:2px solid #E0E0E0;
+		font-size:1.8rem;
+		padding-left:10px;
+	}
+
+	article{
+		float:left;
+		width:100%/$main-nb-colonnes;
+		padding:10px;
+
+		.content{
+			background-color: #EFEFEF;
+			padding:10px;
+			height:$main-article-height;
+
+			h2{
+				padding:10px;
+			}
+			
+			/* appelle le code permettant de cropper une image (attention il faut rajouter un <div> + <img> dans le html */
+			@include croppage(2*$main-article-height/5);
+
+			p{
+				padding-top:10px;
+				text-align: justify;
+				font-size:1rem;
+			}
+		}
+	}
+
+	/* permet de retirer le padding-left du premier element de chaque ligne ex : nth-child(3n+1) */
+	article:nth-child(#{$main-nb-colonnes}n+1){
+		padding-left:0;
+	}
+
+	/* permet de retirer le padding-right du dernier element de chaque ligne ex : nth-child(3n) */
+	article:nth-child(#{$main-nb-colonnes}n){
+		padding-right:0;
+	}
+}
+
+aside{
+	padding-left:10px;
+
+	h1{
+		border-bottom:2px solid #E0E0E0;
+		font-size:1.8rem;
+		padding-left:5px;
+	}
+
+	width:30%;
+	float:right;
+	background-color: #FFFFFF;
+
+	ul{
+		padding-top:10px;
+		li{
+			margin-bottom:1px;
+			list-style-type:none;
+			padding:10px;
+			border-left:4px solid #C0C0C0;
+		}
+
+		li:nth-child(odd){
+			background-color:#F0F0F0;
+		}
+		li:nth-child(even){
+			background-color:#E0E0E0;
+		}
+
+		li:hover{
+			background-color:#FFFFFF;
+			cursor:pointer;
+		}
+	}
+}
+

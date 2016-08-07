@@ -1,0 +1,57 @@
+<!-- ici on voit comment on center un element -->
+<!-- il y a 5 solutions pour le faire !! -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Tuto</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+	  		*{
+	  			/* par defaut les ul et les li on des margin/padding de porc!! */
+	  			padding:0;
+	  			margin:0;
+	  		}
+
+	  		ul{
+	  			/* par default le <ul> est en display:block */;
+	  			list-style: none;
+	  			background-color: #333333;
+	  			
+	  			/* il faut donner un float au <ul> si on veut donner ensuite un float aux <li> */
+	  			/* pourquoi ??? */
+	  			float:left;
+	  			width:100%;
+	  		}
+
+	  		li{
+	  			background-color: #AAAAAA;
+
+	  			/* j'utilise le padding top/bottom pour définir la hauteur de l'élement */
+	  			/* plus j'augmente le padding plus la taille augmente */
+	  			/* le texte reste centré ! */
+	  			padding:20px 50px;
+
+
+	  			/* par defaut les <li> sont en display:block */
+	  			/* on veut qu'ils deviennent alignés sur une meme ligne */
+	  			display:inline-block;
+
+	  			/* j'aligne le tout à droite du parent */
+	  			float:right;
+
+	  			margin-left:3px;
+	  		}
+
+	  </style>
+	</head>
+	<body>
+		<ul>
+			<li>Valeur 1</li>
+			<li>Valeur 2</li>
+			<li>Valeur plus grande 3</li>
+			<li>Valeur 4</li>
+		</ul>
+	</body>
+</html>

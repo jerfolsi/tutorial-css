@@ -1,0 +1,36 @@
+<!-- Book css secret page 44 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Tuto</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+	  		/* à chaque fois qu'on rentre dans un div imbriqué, on trouve une taille de police multipliée par la taille 
+	  		de police parent */
+	  		.div1 div{
+	  			font-size: 1.2em;
+	  		}
+
+	  		/* */
+	  		.div2 div{
+	  			font-size: 0.8em;
+	  		}
+
+	  		/* rem permet de ne pas avoir cet effet de changement de taille de police en cascade */
+	  		/* rem = root => le em d'origine */
+	  		.div3 div{
+	  			font-size: 0.8rem;
+	  		}
+	  </style>
+	</head>
+	<body>
+		<div class="div1">test<div>--test<div>---test</div><div>---test<div>-----test</div></div></div></div>
+
+		<div class="div2">test<div>--test<div>---test</div><div>---test<div>-----test</div></div></div></div>
+
+		<div class="div3">test<div>--test<div>---test</div><div>---test<div>-----test</div></div></div></div>
+
+	</body>
+</html>

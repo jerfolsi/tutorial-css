@@ -1,0 +1,12 @@
+/* avantage : possibilité de créer des variables et éviter les répétitions */
+$font-stack: Helvetica, sans-serif;
+$primary-color: #FF0000;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  color:$var;
+}
+
+
+

@@ -1,0 +1,22 @@
+---------------------------------------------------------
+Ce tutorial suit les videos présentées ici : 
+https://www.youtube.com/watch?v=KYpqPZCzbwA&list=PLLnpHn493BHF-TxB5PqpKfJ_XjTwP5utB&index=1
+
+---------------------------------------------------------
+install susy (last version thanks to --pre)
+>gem install susy --pre
+
+---------------------------------------------------------
+install breakpoint
+>gem install breakpoint
+
+---------------------------------------------------------
+create a config.rb file
+so that compass can know what to do ..
+
+---------------------------------------------------------
+lancer compass de sorte à ce qu'il scrute les modifications
+sur les fichiers 
+>compass watch
+
+

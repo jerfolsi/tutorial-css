@@ -1,0 +1,4 @@
+-tutorial fait avec viper le 29/6/2016 à MaisonsAlfort
+-il faut installer SASS
+-il faut installer compass
+-il faut lancer la commande 'compass watch' pour que le '.scss' soit automatiquement transformé en '.css'

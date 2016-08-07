@@ -1,0 +1,16 @@
+/* factoriser le code grace aux mixins (function) */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { 
+	@include border-radius(10px); 
+	background-color:red;
+	width:300px;
+	height:300px;
+	padding:50px 50px;
+}

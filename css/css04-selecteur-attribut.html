@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Bootstrap Example</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <style>
+		    /* Tous les spans avec l'attribut « lang » sont en gras */
+		    span[lang] {font-weight:bold;}
+		 
+		    /* Tous les spans (=exactement égal) en portugais sont en vert */
+		    span[lang="pt"] {color:green;}
+
+		    /* Tous les spans (~= qui contient au moins) en anglais américain sont en bleu */
+		    /* '~=' : select elements with an attribute value containing a specified word */
+		    /*  la valeur est une liste séparée par des espaces, dont l'un d'eux est exactement « valeur ». */
+		    span[lang~="en-us"] {color: blue;}
+
+		    /* N'importe quel span en chinois est en rouge, cible le simplifié (zh-CN) ou le traditionnel (zh-TW) */
+		    /* |= : starting with the specified value (has to be a whole word!!) */
+		    span[lang|="zh"] {color: red;}
+
+		    /* Tous les liens internes ont une couleur de fond dorée */
+		    /* ^= begins with a specified value. Doesn't have to be a whole word */
+		    a[href^="#"] {background-color:gold}
+
+		    /* Tous les liens dont les urls termines en « .cn » sont en rouge */
+		    /* $= : ends with a specified value */
+		    a[href$=".cn"] {color: red;}
+
+		    /* Tous les liens contenant « exemple » dans l'url ont un fond gris */
+		    /* *= contains a specified value */
+		    a[href*="exemple"] {background-color: #CCCCCC;}
+	  </style>
+	 </head>
+	 <body>
+		<div class="bonjour-exemple">
+		    <a href="http://exemple.com">Anglais :</a>
+		    <span lang="en-us en-gb en-au en-nz">Hello World!</span>
+		</div>
+		<div class="bonjour-exemple">
+		    <a href="#portugais">Portugais :</a>
+		    <span lang="pt fr">Olá Mundo!</span>
+		</div>
+		<div class="bonjour-exemple">
+		    <a href="http://exemple.cn">Chinois (simplifié) :</a>
+		    <span lang="zh-CN">世界您好！</span>
+		</div>
+		<div class="bonjour-exemple">
+		    <a href="http://exemple.cn">Chinois (traditionnel) :</a>
+		    <span lang="zh-TW">世界您好！</span>
+		</div>	 	
+	 </body>
+</html>

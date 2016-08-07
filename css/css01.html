@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Bootstrap Example</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <style>
+
+	  	/* tous les elements du document : attention pas recommandé */
+		* {
+	 		margin: 00;
+	 		padding: 00;
+		}
+
+		/* element dont l'id = #element1 */
+		#element1{
+			background-color: #CCCCCC;
+		}
+
+		/* tous les SPAN descendants de DIV. */
+		div span{
+			background-color: #AAFFAA;
+		}
+
+		/* This is referred to as an adjacent selector. It will select only the element that is immediately preceded by the former element. */
+		span + span{
+			color:red;
+		}
+
+		/* will only select direct children */
+		li > p{
+			font-weight: bold;
+		}
+
+		/* chope le first child */
+		div.section > div:first-child
+		{
+			color:red;
+		}
+
+		/* choper le last child */
+		div.section > div:last-child
+		{
+			color:green;
+		}
+
+
+		/* Referred to as an attributes selector, in our example above, this will only select the anchor tags that have a title attribute. Anchor tags which do not will not receive this particular styling */
+		a[title]{
+			color:red;
+		}
+
+		/*attribute content selector */
+		a[href*="index"]{
+			color:green;
+		}
+
+		/*attribute begin with selector */
+		a[href^="http"]{
+			color:orange;
+		}
+
+		/*attribute end with */
+		a[href$=".pdf"]{
+			color:gray;
+		}
+	  </style>
+	</head>
+	<body>
+		<div class="section">
+			<div>first child</div>
+			<div>second child</div>
+		</div>
+
+		<div>
+			<div id="element1">
+				Element1
+				<span> span1</span>
+				<span> span2<span> bold </span><span>encore</span></span>
+			</div>
+			<div>Element2</div>
+		</div>
+		
+		<a href="#" title="hello world">lien avec un attribut title</a>
+		<a href="#">lien sans attribut title</a>
+		<a href="index.aspx">index</a>
+		<a href="http://www.perave.com">index</a>
+		<a href="http://www.perave.com/test.pdf">fichier pdf</a>
+
+		<div>
+			<ul>
+				<li>
+					<p>Valeur 1</p>
+					<p>Valeur 1B</p>
+				</li>
+				<li><p>Valeur 2</p></li>
+			</ul>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,13 @@
+#small-circle {
+  background-color: red;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+}
+#big-circle {
+  border: 1px solid blue;
+  background-color: red;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}

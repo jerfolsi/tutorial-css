@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Tuto</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+
+
+	  	.solution1{
+	  		/* 'bottom right' est une voie de secour pour les navigateur qui ne comprennent pas background-position */
+	  		background:url('http://www.codingdojo.com/blog/wp-content/uploads/css.jpg') no-repeat bottom right #DDDDDD;
+			background-size: 60px 60px;
+
+	  		/* position du background */
+	  		background-position: right 30px bottom 10px;
+
+	  		width:200px;
+	  		height:200px;
+	  	}
+
+
+		.solution2{
+			background:url('http://www.codingdojo.com/blog/wp-content/uploads/css.jpg') no-repeat #DDDDDD;
+			background-size: 60px 60px;
+
+			/* position du background */
+			padding:10px;
+			background-position: right 20px bottom 0px; /* relative au padding (=>right 20px+10px = 30px) */
+			background-origin: content-box;  /* pour activier la relativité au paddding */
+
+			box-sizing: border-box; /* pour que le padding n'interfere pas sur la taille du div*/
+
+			width:200px;
+	  		height:200px;
+		}	
+
+	  </style>
+	</head>
+	<body>
+		<div class="solution1">Mon div solution 1</div>
+		<BR>
+		<div class="solution2">Mon div solution 2</div>
+	
+	</body>
+</html>

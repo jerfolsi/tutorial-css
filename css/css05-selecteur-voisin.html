@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Bootstrap Example</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <style>
+
+	  		/* ------------------------------------------------------*/
+			/* 				les Selecteurs de voisins direct		 */
+			/*					  element + element					 */
+			/* ------------------------------------------------------*/
+
+	  		/* seulement le deuxieme <li> va etre rouge */
+  			li:first-of-type + li {color:red;}	
+
+  			/* tous les <li> qui ont un prédécesseur (immédiat) <li> vont être bleus*/
+	  		li + li{color:blue;}
+
+	  		/* le <span> suivant directement le <img> et ayant la classe "caption"*/
+	  		img + span.caption {font-style: italic;}
+
+	  		/* ------------------------------------------------------*/
+			/* 				les Selecteurs de voisins généraux   	 */
+			/*					  element ~ element					 */
+			/* ------------------------------------------------------*/
+			/* Le combinateur ~ sépare deux sélecteurs et cible le second élément 
+			/* seulement s'il est précédé par le premier et qu'ils partagent un parent commun */
+
+			/* cible tous les span qui suit le <p> et qui partagent le meme parent que <p> */
+			p ~ span{color:orange;}
+
+			/* ------------------------------------------------------*/
+			/* 				les Selecteurs d'enfants directs	 	 */
+			/*					  element > element					 */
+			/* ------------------------------------------------------*/
+
+			/* cible tous les span qui sont enfants direct de ce div */
+			div.selector-enfant > span{color:green;}
+
+
+			/* ------------------------------------------------------*/
+			/* 				les Selecteurs de descendants		 	 */
+			/*					  element element					 */
+			/* ------------------------------------------------------*/
+
+			/* cible tous les span qui descandants de ce div */
+			div.selector-descendant  span{color:blue;}
+
+	  </style>
+	 </head>
+	 <body>
+ 		<ul>
+ 			<li>one</li>
+ 			<li>two</li>
+ 			<li>three</li>
+ 			<li>four</li>
+ 		</ul>
+	 
+  		<ul>
+ 			<li>one</li>
+ 			<li>two</li>
+ 			<li>three</li>
+ 			<li>four</li>
+ 		</ul>
+
+ 		<img src=""><span class="caption">legende image</span>
+ 		<div></div>
+ 		<span>un autre span</span>
+
+ 		<div>
+ 			<span>un span 0</span>
+ 			<p>un paragraphe</p>
+ 			<a href="">un lien</a>
+ 			<span>un span qui suit le <code>&lt;p&gt;</code> et partage le meme parent</span><br>
+ 			<span>un span qui suit le <code>&lt;p&gt;</code> et partage le meme parent</span><br>
+ 			<span>un span qui suit le <code>&lt;p&gt;</code> et partage le meme parent</span><br>
+ 		</div>
+		<span>un span hors du div </span>
+
+		<div class="selector-enfant">
+			<span>un span1</span><br>
+			<span>un span2</span><br>
+			<div>
+				<span>un span qui n'est ps enfant direct</span>
+			</div>
+		</div>
+		<span>un span hors du div </span>
+
+		<div class="selector-descendant">
+			<span>un span1</span><br>
+			<span>un span2</span><br>
+			<div>
+				<span>un span qui n'est pas enfant mais descendant direct</span>
+			</div>
+		</div>
+		<span>un span hors du div </span>
+	 </body>
+
+
+</html>

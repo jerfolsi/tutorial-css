@@ -1,0 +1,37 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		  <title>Bootstrap Example</title>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		  <style>
+		  	#btn{
+		  		background-color:#AAAAAA;
+		  		box-shadow: 0 0 0 1px black;
+		  		padding:2px;
+		  		display: inline-block;
+		  		margin:5px 0px;
+		  	}
+
+		  	/* seuls les div1 qui suivent la checkbox subiront cette modification */
+		  	#mycheckbox:checked ~ .div1{
+		  		background-color:red;
+		  	}
+
+		  </style>
+		 </head>
+
+	 <body>
+			<div class="div1">un premier Element</div>
+			<!-- ce checkbox sera manipulé par le labal grace à l'attribut 'for' -->
+	 		<input type="checkbox" id="mycheckbox">
+	 		<label for="mycheckbox" id="btn">CLICK ME</label>
+
+	 		<div class="div1">Element qui réagit au checkbox</div>
+			<div class="div1">un autre Element</div>
+	 </body>
+</html>
