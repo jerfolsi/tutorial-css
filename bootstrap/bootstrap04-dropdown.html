@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en">
+   
+   <head>
+      <meta charset = "utf-8">
+      <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      
+      <title>Bootstrap 101 Template</title>
+      
+      <!-- Bootstrap -->
+      <link href = "node_modules/bootstrap/dist/css/bootstrap.min.css" rel = "stylesheet">
+
+      <!-- STYLE -->
+      <style>
+            .dropdown{
+               width:300px;
+               margin:0 auto;
+            }
+
+            .dropdown > button{
+                width:100%;
+               border-radius: 0px;
+            }
+
+            .dropdown > ul{
+                width:100%;
+                border-radius: 0;
+            }
+
+            .dropdown > ul > li > a{
+               line-height: 30px;
+            }
+      </style>
+   </head>
+   
+   <body>
+	
+   <!-- on englobe le dropdown dans un DIV parent -->
+   <div class="dropdown">
+   
+      <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+         Topics <span class="caret"></span>
+      </button>
+      
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+         <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">Java</a>
+         </li>
+         <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">Data Mining</a>
+         </li>
+         <li role="presentation">
+            <a role="menuitem" tabindex ="-1" href="#">
+               Data Communication/Networking
+            </a>
+         </li>
+         <li role="presentation" class="divider"></li>
+         <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">Separated link</a>
+         </li>
+      </ul>
+   
+   </div>
+      
+   </body>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src = "node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</html>
